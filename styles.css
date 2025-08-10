@@ -1,0 +1,214 @@
+/* ======== Base Reset ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ======== Header ======== */
+header {
+  background: linear-gradient(90deg, #c94b4b, #4b134f);
+  color: #fff;
+  padding: 1rem;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Theme Toggle */
+.theme-toggle-wrapper {
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+#themeBtn {
+  background: white;
+  color: #4b134f;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#themeBtn:hover {
+  background: #eee;
+}
+
+/* ======== Timeline Layout ======== */
+#timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Timeline Items */
+#timeline article {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid #c94b4b;
+  transition: transform 0.3s;
+}
+
+#timeline article:hover {
+  transform: translateY(-5px);
+}
+
+#timeline article header time {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c94b4b;
+}
+
+#timeline article header h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0 1rem;
+}
+
+#timeline figure {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#timeline img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+#timeline figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Event marker (dot) */
+#timeline article::before {
+  content: '';
+  position: absolute;
+  left: -13px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: #c94b4b;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Buttons */
+#timeline button {
+  background: #c94b4b;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+#timeline button:hover {
+  background: #a83232;
+}
+
+/* ======== Modal ======== */
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  max-width: 500px;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+#modal[hidden] {
+  display: none;
+}
+
+#modal button {
+  background: #4b134f;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#modal button:hover {
+  background: #2e0832;
+}
+
+/* ======== Footer ======== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  background: #4b134f;
+  color: white;
+}
+
+/* ======== Responsive Breakpoints ======== */
+
+/* Mobile (<768px) */
+@media (max-width: 767px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  #timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet (768–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  #timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
