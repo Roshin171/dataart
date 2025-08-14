@@ -9,41 +9,45 @@
 </head>
 <body>
 
-  <header>
-    <nav aria-label="Fashion Year Navigation">
-      <ul class="year-links">
-        <li><a href="#year-1900">1900</a></li>
-        <li><a href="#year-1910">1910</a></li>
-        <li><a href="#year-1920">1920</a></li>
-        <li><a href="#year-1930">1930</a></li>
-        <li><a href="#year-1940">1940</a></li>
-        <li><a href="#year-1970">1970</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Fashion Timeline</h1>
+  <div class="theme-toggle-wrapper">
+    <button id="themeBtn" aria-label="Toggle Theme">Toggle Theme</button>
+  </div>
+  <nav aria-label="Fashion Year Navigation">
+    <ul class="year-links">
+      <li><a href="#year-1900">1900</a></li>
+      <li><a href="#year-1910">1910</a></li>
+      <li><a href="#year-1920">1920</a></li>
+      <li><a href="#year-1930">1930</a></li>
+      <li><a href="#year-1940">1940</a></li>
+      <li><a href="#year-1977">1977</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <section id="timeline" aria-label="Fashion History Timeline"></section>
+<main>
+  <section id="timeline" aria-label="Fashion History Timeline"></section>
 
-    <!-- Modal -->
-    <div id="modal" role="dialog" aria-modal="true" hidden>
-      <div class="modal-content">
-        <button id="closeModal" aria-label="Close modal window">X</button>
-        <h2 id="modalTitle"></h2>
-        <img id="modalImage" alt="">
-        <p id="modalDescription"></p>
-        <p><strong>Category:</strong> <span id="modalCategory"></span></p>
-      </div>
+  <div id="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-content">
+      <button id="closeModal" aria-label="Close modal window">X</button>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" alt="">
+      <p id="modalDescription"></p>
+      <p><strong>Category:</strong> <span id="modalCategory"></span></p>
     </div>
-  </main>
+  </div>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Fashion Timeline</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Fashion Timeline</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
 
 
 
