@@ -16,20 +16,50 @@
 
     <nav aria-label="Fashion Year Navigation">
       <ul class="year-links">
-        <!-- This can be auto-generated too, but for now we keep it static -->
-        <li><a href="#year-1900">1900</a></li>
-        <li><a href="#year-1910">1910</a></li>
-        <li><a href="#year-1920">1920</a></li>
-        <li><a href="#year-1930">1930</a></li>
-        <li><a href="#year-1940">1940</a></li>
-        <li><a href="#year-1977">1977</a></li>
+        <li><a href="#" data-filter="all">All</a></li>
+        <li><a href="#" data-filter="1900">1900</a></li>
+        <li><a href="#" data-filter="1910">1910</a></li>
+        <li><a href="#" data-filter="1920">1920</a></li>
+        <li><a href="#" data-filter="1930">1930</a></li>
+        <li><a href="#" data-filter="1940">1940</a></li>
+        <li><a href="#" data-filter="1977">1977</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Timeline will be populated by JS -->
-    <section id="timeline" aria-label="Fashion History Timeline"></section>
+    <section id="timeline" aria-label="Fashion History Timeline">
+      <!-- Example Cards -->
+      <div class="card" data-year="1900">
+        <h3>1900 Fashion</h3>
+        <img src="img1900.jpg" alt="1900 fashion">
+        <p>Description of 1900 style.</p>
+      </div>
+
+      <div class="card" data-year="1910">
+        <h3>1910 Fashion</h3>
+        <img src="img1910.jpg" alt="1910 fashion">
+        <p>Description of 1910 style.</p>
+      </div>
+
+      <div class="card" data-year="1920">
+        <h3>1920 Fashion</h3>
+        <img src="img1920.jpg" alt="1920 fashion">
+        <p>Description of 1920 style.</p>
+      </div>
+
+      <div class="card" data-year="1940">
+        <h3>1940 Fashion</h3>
+        <img src="img1940.jpg" alt="1940 fashion">
+        <p>Description of 1940 style.</p>
+      </div>
+
+      <div class="card" data-year="1977">
+        <h3>1977 Fashion</h3>
+        <img src="img1977.jpg" alt="1977 fashion">
+        <p>Description of 1977 style.</p>
+      </div>
+    </section>
 
     <!-- Modal Section -->
     <div id="modal" role="dialog" aria-modal="true" hidden>
@@ -47,10 +77,10 @@
     <p>&copy; 2025 Fashion Timeline</p>
   </footer>
 
-  <!-- Load JS last for performance -->
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
