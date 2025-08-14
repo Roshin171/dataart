@@ -1,44 +1,39 @@
 [
   {
-    "year": "1900",
+    "year": "1900s",
     "title": "Edwardian Era Elegance",
-    "description": "The early 1900s fashion featured S-shaped corsets, high collars, and lavish gowns that emphasized formality and femininity.",
-    "imageURL": "images/Edwardian Era Elegance.jpg",
-    "category": "Historical"
+    "description": "A period marked by luxurious fabrics, elaborate hats, and flowing gowns symbolizing social status and refinement.",
+    "imageURL": "Edwardian Era Elegance.jpg"
   },
   {
-    "year": "1910",
-    "title": "Poiret and the Birth of Modernism",
-    "description": "Designer Paul Poiret rejected corsets, introducing free-flowing silhouettes and bold colors that shaped early modern fashion.",
-    "imageURL": "images/Poiret and the Birth of Modernism.jpg",
-    "category": "Modernism"
-  },
-  {
-    "year": "1920",
+    "year": "1920s",
     "title": "The Flapper Revolution",
-    "description": "The roaring twenties introduced short hemlines, fringe, beads, and bobbed hair. Fashion reflected women's liberation and nightlife culture.",
-    "imageURL": "images/The Flapper Revolution.jpg",
-    "category": "Roaring Twenties"
+    "description": "Shorter hemlines, bobbed hair, and bold accessories challenged traditional norms and embraced freedom.",
+    "imageURL": "The Flapper Revolution.jpg"
   },
   {
-    "year": "1930",
-    "title": "Hollywood Glamour",
-    "description": "Fashion in the 1930s turned to bias-cut gowns, satin fabrics, and long lines inspired by silver screen stars like Jean Harlow and Marlene Dietrich.",
-    "imageURL": "images/Hollywood Glamour.jpg",
-    "category": "Golden Age"
-  },
-  {
-    "year": "1940",
+    "year": "1930s-40s",
     "title": "Utility and Wartime Fashion",
-    "description": "World War II led to rationing, resulting in simple, structured silhouettes, shorter skirts, and functional fashion for women in the workforce.",
-    "imageURL": "images/Utility and Wartime Fashion.jpg",
-    "category": "Wartime"
+    "description": "Practical designs with a focus on durability during wartime, blending style with necessity.",
+    "imageURL": "Utility and Wartime Fashion.jpg"
   },
   {
-    "year": "1977",
+    "year": "1940s-50s",
+    "title": "Hollywood Glamour",
+    "description": "The silver screen influenced fashion with sleek silhouettes, red lips, and elegant gowns.",
+    "imageURL": "Hollywood Glamour.jpg"
+  },
+  {
+    "year": "1910s-30s",
+    "title": "Poiret and the Birth of Modernism",
+    "description": "Paul Poiret's designs broke away from corsets, embracing flowing lines and bold colors.",
+    "imageURL": "Poiret and the Birth of Modernism.jpg"
+  },
+  {
+    "year": "1970s-80s",
     "title": "Rise of Punk & Street Fashion",
-    "description": "The punk movement brought rebellion to the runway — safety pins, ripped clothes, leather, and Vivienne Westwood defined the 1977 street style. It challenged traditional fashion norms and inspired a generation of DIY expression.",
-    "imageURL": "images/Rise of Punk & Street Fashion.jpg",
-    "category": "Punk"
+    "description": "Rebellious styles with leather jackets, ripped jeans, and DIY fashion statements.",
+    "imageURL": "Rise of Punk & Street Fashion.jpg"
   }
 ]
+
