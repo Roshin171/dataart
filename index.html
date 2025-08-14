@@ -3,106 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fashion Timeline</title>
+  <title>Interactive Timeline</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-    h1 {
-      text-align: center;
-      background: black;
-      color: white;
-      padding: 15px;
-      margin: 0;
-    }
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    .event {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 20px 0;
-      width: 100%;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .event img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .event h2 {
-      margin-top: 10px;
-      color: #333;
-    }
-    .event p {
-      color: #666;
-      font-size: 14px;
-    }
-    footer {
-      text-align: center;
-      background: black;
-      color: white;
-      padding: 10px;
-      margin-top: 30px;
-    }
+    #timeline { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px; }
+    .event-marker { padding: 10px; background: #3498db; color: white; border-radius: 5px; }
+    #modal { display: none; position: fixed; top: 50%; left: 50%; 
+             transform: translate(-50%, -50%); background: white; padding: 20px; 
+             border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 1000; }
+    #modal-close { cursor: pointer; color: red; font-weight: bold; float: right; }
+    .modal-image { max-width: 100%; margin-top: 10px; border-radius: 5px; }
+    #modal-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); z-index: 999; }
   </style>
 </head>
 <body>
-  <h1>Fashion Timeline</h1>
-  
-  <div class="timeline">
-    <div class="event">
-      <img src="Edwardian_Era_Elegance.jpg" alt="Edwardian Era Elegance">
-      <h2>Edwardian Era Elegance</h2>
-      <p>Characterized by elaborate gowns, lace embellishments, and refined hats — a true display of sophistication.</p>
-    </div>
-    
-    <div class="event">
-      <img src="Poiret_Birth_Modernism.jpg" alt="Poiret and the Birth of Modernism">
-      <h2>Poiret and the Birth of Modernism</h2>
-      <p>Paul Poiret revolutionized fashion by freeing women from corsets and introducing flowing, artistic garments.</p>
-    </div>
-    
-    <div class="event">
-      <img src="The_Flapper_Revolution.jpg" alt="The Flapper Revolution">
-      <h2>The Flapper Revolution</h2>
-      <p>1920s flappers embraced short skirts, bobbed hair, and jazz-inspired fashion, symbolizing independence.</p>
-    </div>
-    
-    <div class="event">
-      <img src="Hollywood_Glamour.jpg" alt="Hollywood Glamour">
-      <h2>Hollywood Glamour</h2>
-      <p>Golden Age Hollywood brought luxurious gowns, satin fabrics, and an aura of star-studded sophistication.</p>
-    </div>
-    
-    <div class="event">
-      <img src="Utility_and_Wartime_Fashion.jpg" alt="Utility and Wartime Fashion">
-      <h2>Utility and Wartime Fashion</h2>
-      <p>1940s wartime fashion emphasized practicality with tailored suits, knee-length skirts, and minimal fabric use.</p>
-    </div>
-    
-    <div class="event">
-      <img src="Rise_of_Punk_and_Street_Fashion.jpg" alt="Rise of Punk and Street Fashion">
-      <h2>Rise of Punk and Street Fashion</h2>
-      <p>From rebellious leather jackets to streetwear culture, punk and urban styles shaped modern fashion attitudes.</p>
-    </div>
-  </div>
 
-  <footer>
-    &copy; 2025 Fashion History Project
-  </footer>
+<h1>Interactive Timeline</h1>
+<div id="timeline"></div>
+
+<!-- Modal -->
+<div id="modal-overlay"></div>
+<div id="modal">
+  <span id="modal-close">X</span>
+  <h2 class="modal-title"></h2>
+  <p class="modal-description"></p>
+  <img class="modal-image" src="" alt="">
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
