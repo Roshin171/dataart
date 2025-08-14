@@ -1,1 +1,59 @@
+[
+  {
+    "year": "1900",
+    "title": "Edwardian Era Elegance",
+    "description": "S-shaped corsets, high collars, and lavish gowns emphasized a formal, feminine silhouette at the turn of the century.",
+    "imageURL":"Edwardian Era Elegance.jpg",
+    "category": "Historical Fashion"
+  },
+  {
+    "year": "1910",
+    "title": "Poiret & the Birth of Modernism",
+    "description": "Paul Poiret popularized corset-free, fluid silhouettes with bold colors and Orientalist influences.",
+    "imageURL": "Poiret and the Birth of Modernism.jpg",
+    "category": "Designer Revolution"
+  },
+  {
+    "year": "1920",
+    "title": "The Flapper Revolution",
+    "description": "Drop waists, short hemlines, beading, and bobbed hair reflected women’s liberation and nightlife culture.",
+    "imageURL": "The Flapper Revolution.jpg",
+    "category": "Cultural Shift"
+  },
+  {
+    "year": "1930",
+    "title": "Hollywood Glamour",
+    "description": "Bias-cut satin gowns and long, sleek lines were inspired by silver-screen icons.",
+    "imageURL": "Hollywood Glamour.jpg",
+    "category": "Cinema Influence"
+  },
+  {
+    "year": "1947",
+    "title": "Dior’s New Look",
+    "description": "Christian Dior reintroduced opulence post-WWII with cinched waists, full skirts, and soft shoulders.",
+    "imageURL": "https://via.placeholder.com/900x520.png?text=New+Look+%281947%29",
+    "category": "Haute Couture"
+  },
+  {
+    "year": "1965",
+    "title": "Mod & the Miniskirt",
+    "description": "Mary Quant and London’s youthquake brought bold geometrics, bright colors, and the iconic miniskirt.",
+    "imageURL": "The Flapper Revolution.jpg",
+    "category": "Youth Culture"
+  },
+  {
+    "year": "1977",
+    "title": "Punk Style Emerges",
+    "description": "DIY aesthetics, ripped tees, leather, and safety pins — popularized by Vivienne Westwood and subculture scenes.",
+    "imageURL": "Rise of Punk & Street Fashion.jpg",
+    "category": "Subculture"
+  },
+  {
+    "year": "1992",
+    "title": "Grunge Fashion",
+    "description": "Flannel shirts, distressed denim, and combat boots challenged luxury norms in the early ’90s.",
+    "imageURL": "Utility and Wartime Fashion.jpg",
+    "category": "Streetwear"
+  }
+]
 
