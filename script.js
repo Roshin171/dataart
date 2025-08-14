@@ -1,64 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const timeline = document.getElementById("timeline");
-  const modal = document.getElementById("modal");
-  const modalTitle = document.getElementById("modal-title");
-  const modalImage = document.getElementById("modal-image");
-  const modalDescription = document.getElementById("modal-description");
-  const closeModalBtn = document.getElementById("closeModal");
-  const yearLinks = document.getElementById("year-links");
+fetch('events.json')
+  .then(response => response.json())
+  .then(data => {
+    const timeline = document.getElementById('timeline');
+    data.forEach(event => {
+      const eventCard = document.createElement('div');
+      eventCard.className = 'event-card';
 
-  // Fetch and render events
-  fetch("data/events.json")
-    .then(res => res.json())
-    .then(events => {
-      events.forEach(event => {
-        // Add year link to navigation
-        const yearItem = document.createElement("li");
-        yearItem.innerHTML = `<a href="#year-${event.year}">${event.year}</a>`;
-        yearLinks.appendChild(yearItem);
+      const img = document.createElement('img');
+      img.src = event.imageURL; // No /images/ prefix since images are in root
+      img.alt = event.title;
 
-        // Create event card
-        const article = document.createElement("article");
-        article.id = `year-${event.year}`;
-        article.innerHTML = `
-          <header>
-            <time datetime="${event.year}">${event.year}</time>
-            <h2>${event.title}</h2>
-          </header>
-          <figure>
-            <img src="${event.imageURL}" alt="${event.title}" width="100" height="100">
-          </figure>
-          <p>${event.description.substring(0, 80)}...</p>
-          <button data-year="${event.year}">Learn More</button>
-        `;
-        timeline.appendChild(article);
-      });
-    })
-    .catch(err => console.error("Error loading events:", err));
+      const content = document.createElement('div');
+      content.className = 'event-content';
 
-  // Open modal
-  timeline.addEventListener("click", e => {
-    if (e.target.tagName === "BUTTON") {
-      const year = e.target.getAttribute("data-year");
-      fetch("data/events.json")
-        .then(res => res.json())
-        .then(events => {
-          const event = events.find(ev => ev.year === year);
-          modalTitle.textContent = event.title;
-          modalImage.src = event.imageURL;
-          modalImage.alt = event.title;
-          modalDescription.textContent = event.description;
-          modal.hidden = false;
-        });
-    }
-  });
+      const year = document.createElement('h2');
+      year.textContent = event.year;
 
-  // Close modal
-  closeModalBtn.addEventListener("click", () => {
-    modal.hidden = true;
-  });
+      const title = document.createElement('h3');
+      title.textContent = event.title;
 
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") modal.hidden = true;
-  });
-});
+      const desc = document.createElement('p');
+      desc.textContent = event.description;
+
+      content.appendChild(year);
+      content.appendChild(title);
+      content.appendChild(desc);
+
+      eventCard.appendChild(img);
+      eventCard.appendChild(content);
+
+      timeline.appendChild(eventCard);
+    });
+  })
+  .catch(error => console.error('Error loading events:', error));
+
