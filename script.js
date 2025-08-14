@@ -1,56 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const timeline = document.getElementById("timeline");
-  const modal = document.getElementById("modal");
-  const closeModalBtn = document.getElementById("closeModal");
+const timeline = document.getElementById('timeline')
+const modal = document.getElementById('modal')
+const modalTitle = modal.querySelector('h2')
+const modalContent = modal.querySelector('p')
+const closeModalBtn = modal.querySelector('button[aria-label="Close Modal"]')
 
-  const modalTitle = document.getElementById("modalTitle");
-  const modalImage = document.getElementById("modalImage");
-  const modalDescription = document.getElementById("modalDescription");
-  const modalCategory = document.getElementById("modalCategory");
+fetch('events.json')
+  .then(response => response.json())
+  .then(events => {
+    renderTimeline(events)
+    attachEventHandlers()
+  })
 
-  // Fetch events from JSON
-  fetch("data/events.json")
-    .then(response => response.json())
-    .then(events => {
-      events.forEach(event => {
-        const article = document.createElement("article");
-        article.id = `year-${event.year}`;
-        article.innerHTML = `
-          <header>
-            <time datetime="${event.year}">${event.year}</time>
-            <h2>${event.title}</h2>
-          </header>
-          <figure>
-            <img src="${event.imageURL}" width="100" height="100" alt="${event.title}">
-            <figcaption>${event.title}</figcaption>
-          </figure>
-          <button class="learn-more">Learn More</button>
-        `;
+function renderTimeline(events) {
+  timeline.innerHTML = ''
+  events.forEach(event => {
+    const article = document.createElement('article')
+    article.id = year-${event.year}
+    article.innerHTML = `
+      <header>
+        <p><time datetime="${event.year}">${event.year}</time></p>
+        <h2>${event.title}</h2>
+      </header>
+      <figure>
+        <img src="${event.imageURL}" alt="${event.title}" width="100" height="100" />
+        <figcaption>${event.title}</figcaption>
+      </figure>
+      <p>${event.description}</p>
+      <button aria-label="Learn more about ${event.title}">Learn More</button>
+    `
+    timeline.appendChild(article)
+  })
+}
 
-        // Learn More button click → open modal
-        article.querySelector(".learn-more").addEventListener("click", () => {
-          modalTitle.textContent = event.title;
-          modalImage.src = event.imageURL;
-          modalImage.alt = event.title;
-          modalDescription.textContent = event.description;
-          modalCategory.textContent = event.category;
-          modal.hidden = false;
-        });
 
-        timeline.appendChild(article);
-      });
+function attachEventHandlers() {
+  document.querySelectorAll('#timeline button').forEach(button => {
+    button.addEventListener('click', () => {
+      const article = button.closest('article')
+      modalTitle.textContent = article.querySelector('h2').textContent
+      modalContent.textContent = article.querySelectorAll('p')[1].textContent
+      modal.removeAttribute('hidden')
     })
-    .catch(err => console.error("Error loading events:", err));
+  })
+}
 
-  // Close modal
-  closeModalBtn.addEventListener("click", () => {
-    modal.hidden = true;
-  });
-
-  // Close modal on outside click
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.hidden = true;
-    }
-  });
-});
+closeModalBtn.addEventListener('click', () => {
+  modal.setAttribute('hidden', '')
+})
