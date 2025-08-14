@@ -1,58 +1,59 @@
 [
   {
-    "year": "1900",
-    "title": "Edwardian Era Elegance",
-    "description": "The early 1900s fashion featured S-shaped corsets, high collars, and lavish gowns that emphasized formality and femininity.",
-    "imageURL": "Edwardian Era Elegance.jpg",
-    "category": "Historical Fashion"
+    "year": 1900,
+    "title": "Edwardian Elegance",
+    "description": "Flowing dresses and ornate hats defined early 1900s fashion.",
+    "imageURL": "images/1900.jpg",
+    "category": "Vintage"
   },
   {
-    "year": "1910",
-    "title": "Poiret and the Birth of Modernism",
-    "description": "Designer Paul Poiret rejected corsets, introducing free-flowing silhouettes and bold colors that shaped early modern fashion.",
-    "imageURL": "Poiret and the Birth of Modernism.jpg",
-    "category": "Designer Revolution"
+    "year": 1910,
+    "title": "Tailored Trends",
+    "description": "Suits and skirts became popular for women entering the workforce.",
+    "imageURL": "images/1910.jpg",
+    "category": "Classic"
   },
   {
-    "year": "1920",
-    "title": "The Flapper Revolution",
-    "description": "The roaring twenties introduced short hemlines, fringe, beads, and bobbed hair. Fashion reflected women's liberation and nightlife culture.",
-    "imageURL": "The Flapper Revolution.jpg",
-    "category": "Cultural Shift"
+    "year": 1920,
+    "title": "Flapper Revolution",
+    "description": "Shorter hemlines, sequins, and bobbed hair captured the roaring twenties.",
+    "imageURL": "images/1920.jpg",
+    "category": "Retro"
   },
   {
-    "year": "1930",
+    "year": 1930,
     "title": "Hollywood Glamour",
-    "description": "Fashion in the 1930s turned to bias-cut gowns, satin fabrics, and long lines inspired by silver screen stars like Jean Harlow and Marlene Dietrich.",
-    "imageURL": "Hollywood Glamour.jpg",
-    "category": "Cinema Influence"
+    "description": "Bias-cut dresses and fur stoles influenced everyday wear.",
+    "imageURL": "images/1930.jpg",
+    "category": "Glamour"
   },
   {
-    "year": "1940",
-    "title": "Utility and Wartime Fashion",
-    "description": "World War II led to rationing, resulting in simple, structured silhouettes, shorter skirts, and functional fashion for women in the workforce.",
-    "imageURL": "Utility and Wartime Fashion.jpg",
-    "category": "War Era"
+    "year": 1940,
+    "title": "Utility Chic",
+    "description": "Wartime fashion emphasized practicality and durability.",
+    "imageURL": "images/1940.jpg",
+    "category": "Utility"
   },
   {
-    "year": "1977",
-    "title": "Rise of Punk & Street Fashion",
-    "description": "The punk movement brought rebellion to the runway — safety pins, ripped clothes, leather, and Vivienne Westwood defined the 1977 street style.",
-    "imageURL": "Rise of Punk & Street Fashion.jpg",
-    "category": "Rebellion Style"
+    "year": 1950,
+    "title": "Rockabilly Style",
+    "description": "Poodle skirts, polka dots, and leather jackets defined the era.",
+    "imageURL": "images/1950.jpg",
+    "category": "Rockabilly"
   },
   {
-    "year": "1980",
-    "title": "Power Dressing",
-    "description": "The 1980s embraced shoulder pads, bold colors, and corporate chic as women made their mark in the workplace.",
-    "imageURL": "Power Dressing.jpg",
-    "category": "Corporate Fashion"
+    "year": 1960,
+    "title": "Mod Movement",
+    "description": "Bright colors, bold patterns, and mini skirts emerged.",
+    "imageURL": "images/1960.jpg",
+    "category": "Mod"
   },
   {
-    "year": "2000",
-    "title": "Y2K Revival",
-    "description": "Low-rise jeans, shiny fabrics, and futuristic styles defined early 2000s fashion trends.",
-    "imageURL": "Y2K Revival.jpg",
-    "category": "Millennium Trend"
+    "year": 1977,
+    "title": "Disco Fever",
+    "description": "Sequins, bell bottoms, and platform shoes ruled the dance floors.",
+    "imageURL": "images/1977.jpg",
+    "category": "Disco"
   }
 ]
+
