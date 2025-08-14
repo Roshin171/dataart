@@ -1,0 +1,44 @@
+[
+  {
+    "year": "1900",
+    "title": "Edwardian Era Elegance",
+    "description": "The early 1900s fashion featured S-shaped corsets, high collars, and lavish gowns that emphasized formality and femininity.",
+    "imageURL": "images/Edwardian Era Elegance.jpg",
+    "category": "Historical"
+  },
+  {
+    "year": "1910",
+    "title": "Poiret and the Birth of Modernism",
+    "description": "Designer Paul Poiret rejected corsets, introducing free-flowing silhouettes and bold colors that shaped early modern fashion.",
+    "imageURL": "images/Poiret and the Birth of Modernism.jpg",
+    "category": "Modernism"
+  },
+  {
+    "year": "1920",
+    "title": "The Flapper Revolution",
+    "description": "The roaring twenties introduced short hemlines, fringe, beads, and bobbed hair. Fashion reflected women's liberation and nightlife culture.",
+    "imageURL": "images/The Flapper Revolution.jpg",
+    "category": "Roaring Twenties"
+  },
+  {
+    "year": "1930",
+    "title": "Hollywood Glamour",
+    "description": "Fashion in the 1930s turned to bias-cut gowns, satin fabrics, and long lines inspired by silver screen stars like Jean Harlow and Marlene Dietrich.",
+    "imageURL": "images/Hollywood Glamour.jpg",
+    "category": "Golden Age"
+  },
+  {
+    "year": "1940",
+    "title": "Utility and Wartime Fashion",
+    "description": "World War II led to rationing, resulting in simple, structured silhouettes, shorter skirts, and functional fashion for women in the workforce.",
+    "imageURL": "images/Utility and Wartime Fashion.jpg",
+    "category": "Wartime"
+  },
+  {
+    "year": "1977",
+    "title": "Rise of Punk & Street Fashion",
+    "description": "The punk movement brought rebellion to the runway — safety pins, ripped clothes, leather, and Vivienne Westwood defined the 1977 street style. It challenged traditional fashion norms and inspired a generation of DIY expression.",
+    "imageURL": "images/Rise of Punk & Street Fashion.jpg",
+    "category": "Punk"
+  }
+]
