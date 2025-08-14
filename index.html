@@ -1,24 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Timeline</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Fashion Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.jpg">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="logo.jpg" alt="Fashion Logo" class="logo">
-        <h1>Fashion Through the Decades</h1>
-    </header>
 
-    <main id="timeline"></main>
+  <header>
+    <div class="theme-toggle-wrapper">
+      <button id="themeBtn" aria-label="Toggle Theme">Toggle Theme</button>
+    </div>
 
-    <script src="script.js"></script>
+    <nav aria-label="Fashion Year Navigation">
+      <ul class="year-links">
+        <li><a href="#year-1900">1900</a></li>
+        <li><a href="#year-1910">1910</a></li>
+        <li><a href="#year-1920">1920</a></li>
+        <li><a href="#year-1930">1930</a></li>
+        <li><a href="#year-1940">1940</a></li>
+        <li><a href="#year-1977">1977</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="timeline" aria-label="Fashion History Timeline">
+
+      <!-- 1900 -->
+      <article id="year-1900">
+        <header>
+          <time datetime="1900">1900</time>
+          <h2>Edwardian Era Elegance</h2>
+        </header>
+        <figure>
+          <img src="Edwardian Era Elegance.jpg" width="100" height="100" alt="Edwardian gown">
+          <figcaption>Edwardian gown style</figcaption>
+        </figure>
+        <p>The early 1900s fashion featured S-shaped corsets, high collars, and lavish gowns that emphasized formality and femininity.</p>
+        <button aria-label="More about 1900s fashion">Learn More</button>
+      </article>
+
+      <!-- 1910 -->
+      <article id="year-1910">
+        <header>
+          <time datetime="1910">1910</time>
+          <h2>Poiret and the Birth of Modernism</h2>
+        </header>
+        <figure>
+          <img src="Poiret and the Birth of Modernism.jpg" width="100" height="100" alt="Poiret fashion sketch">
+          <figcaption>Paul Poiret’s modern designs</figcaption>
+        </figure>
+        <p>Designer Paul Poiret rejected corsets, introducing free-flowing silhouettes and bold colors that shaped early modern fashion.</p>
+        <button aria-label="More about Poiret fashion">Learn More</button>
+      </article>
+
+      <!-- 1920 -->
+      <article id="year-1920">
+        <header>
+          <time datetime="1920">1920</time>
+          <h2>The Flapper Revolution</h2>
+        </header>
+        <figure>
+          <img src="The Flapper Revolution.jpg" width="100" height="100" alt="1920s flapper dress">
+          <figcaption>Iconic flapper dress</figcaption>
+        </figure>
+        <p>The roaring twenties introduced short hemlines, fringe, beads, and bobbed hair. Fashion reflected women's liberation and nightlife culture.</p>
+        <button aria-label="More about 1920s fashion">Learn More</button>
+      </article>
+
+      <!-- 1930 -->
+      <article id="year-1930">
+        <header>
+          <time datetime="1930">1930</time>
+          <h2>Hollywood Glamour</h2>
+        </header>
+        <figure>
+          <img src="Hollywood Glamour.jpg" width="100" height="100" alt="1930s gown">
+          <figcaption>Bias-cut Hollywood gown</figcaption>
+        </figure>
+        <p>Fashion in the 1930s turned to bias-cut gowns, satin fabrics, and long lines inspired by silver screen stars like Jean Harlow and Marlene Dietrich.</p>
+        <button aria-label="More about 1930s glamour">Learn More</button>
+      </article>
+
+      <!-- 1940 -->
+      <article id="year-1940">
+        <header>
+          <time datetime="1940">1940</time>
+          <h2>Utility and Wartime Fashion</h2>
+        </header>
+        <figure>
+          <img src="Utility and Wartime Fashion.jpg" width="100" height="100" alt="1940s utility dress">
+          <figcaption>Utility-style dresses during WWII</figcaption>
+        </figure>
+        <p>World War II led to rationing, resulting in simple, structured silhouettes, shorter skirts, and functional fashion for women in the workforce.</p>
+        <button aria-label="More about 1940s wartime fashion">Learn More</button>
+      </article>
+
+      <!-- 1977 -->
+      <article id="year-1977">
+        <header>
+          <time datetime="1977">1977</time>
+          <h2>Rise of Punk & Street Fashion</h2>
+        </header>
+        <figure>
+          <img src="Rise of Punk & Street Fashion.jpg" width="100" height="100" alt="Punk fashion example">
+          <figcaption>Punk-inspired style</figcaption>
+        </figure>
+        <p>The punk movement brought rebellion to the runway — safety pins, ripped clothes, leather, and Vivienne Westwood defined the 1977 street style.</p>
+        <p>It challenged traditional fashion norms and inspired a generation of DIY expression.</p>
+        <button aria-label="More about punk fashion">Learn More</button>
+      </article>
+
+    </section>
+
+    <!-- Modal Section -->
+    <section id="modal" role="dialog" aria-modal="true" hidden>
+      <h2>More Info</h2>
+      <p>Details about the selected fashion trend will be shown here.</p>
+      <button aria-label="Close modal window">Close</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fashion Timeline</p>
+  </footer>
+
 </body>
 </html>
-
  
+
 
 
 
