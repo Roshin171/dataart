@@ -4,57 +4,230 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fashion Timeline</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- All CSS inside -->
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background: #222;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    header nav ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Timeline layout */
+    #timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    #timeline article {
+      background: #fff;
+      border-left: 4px solid #444;
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    #timeline article::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 20px;
+      width: 16px;
+      height: 16px;
+      background: #444;
+      border-radius: 50%;
+    }
+
+    #timeline img {
+      display: block;
+      margin: 10px 0;
+      border-radius: 4px;
+      max-width: 100%;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* Dark theme */
+    body.dark {
+      background: #121212;
+      color: #ddd;
+    }
+
+    body.dark header {
+      background: #333;
+    }
+
+    body.dark footer {
+      color: #aaa;
+    }
+
+    /* Modal styling */
+    dialog {
+      border: none;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    dialog button {
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    dialog button:hover {
+      background: #666;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.jpg" alt="Fashion Logo" class="logo" />
-    <h1>Fashion Through the Ages</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Timeline</a></li>
+        <li><a href="#">About</a></li>
+        <li><button id="themeBtn">Toggle Theme</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="timeline">
-    <section class="event">
-      <h2>Edwardian Era Elegance</h2>
-      <img src="Edwardian_Era_Elegance.jpg" alt="Edwardian Era Elegance" />
-      <p>The Edwardian Era was characterized by elegance, ornate dresses, and high-society fashion trends.</p>
-    </section>
+  <main>
+    <section id="timeline">
+      <article>
+        <h2>Edwardian Era Elegance</h2>
+        <img src="Edwardian_Era_Elegance.jpg" alt="Edwardian Era Elegance">
+        <p>Early 1900s fashion was defined by luxury and elaborate tailoring, reflecting the prosperity of the Edwardian period.</p>
+        <button>Read more</button>
+      </article>
 
-    <section class="event">
-      <h2>Hollywood Glamour</h2>
-      <img src="Hollywood_Glamour.jpg" alt="Hollywood Glamour" />
-      <p>Hollywood's golden age brought glamorous gowns, satin fabrics, and dazzling accessories to the spotlight.</p>
-    </section>
+      <article>
+        <h2>Poiret and the Birth of Modernism</h2>
+        <img src="Poiret_and_the_Birth_of_Modernism.jpg" alt="Poiret and the Birth of Modernism">
+        <p>Paul Poiret revolutionized women's fashion in the early 20th century, liberating them from corsets.</p>
+        <button>Read more</button>
+      </article>
 
-    <section class="event">
-      <h2>Poiret and the Birth of Modernism</h2>
-      <img src="Poiret_Birth_Modernism.jpg" alt="Poiret and the Birth of Modernism" />
-      <p>Designer Paul Poiret revolutionized fashion with free-flowing silhouettes and bold colors.</p>
-    </section>
+      <article>
+        <h2>The Flapper Revolution</h2>
+        <img src="The_Flapper_Revolution.jpg" alt="The Flapper Revolution">
+        <p>The 1920s brought flapper dresses, bobbed hair, and a spirit of rebellion in women's fashion.</p>
+        <button>Read more</button>
+      </article>
 
-    <section class="event">
-      <h2>Rise of Punk and Street Fashion</h2>
-      <img src="Rise_of_Punk_and_Street_Fashion.jpg" alt="Rise of Punk and Street Fashion" />
-      <p>Punk fashion emerged as a rebellious statement, introducing leather jackets, ripped jeans, and bold accessories.</p>
-    </section>
+      <article>
+        <h2>Hollywood Glamour</h2>
+        <img src="Hollywood_Glamour.jpg" alt="Hollywood Glamour">
+        <p>1930s and 40s cinema heavily influenced evening wear and high fashion styles worldwide.</p>
+        <button>Read more</button>
+      </article>
 
-    <section class="event">
-      <h2>The Flapper Revolution</h2>
-      <img src="The_Flapper_Revolution.jpg" alt="The Flapper Revolution" />
-      <p>Flapper style in the 1920s broke norms with shorter skirts, bobbed hair, and carefree spirit.</p>
-    </section>
+      <article>
+        <h2>Utility and Wartime Fashion</h2>
+        <img src="Utility_and_Wartime_Fashion.jpg" alt="Utility and Wartime Fashion">
+        <p>World War II brought practical, resource-conscious designs that reshaped fashion priorities.</p>
+        <button>Read more</button>
+      </article>
 
-    <section class="event">
-      <h2>Utility and Wartime Fashion</h2>
-      <img src="Utility_and_Wartime_Fashion.jpg" alt="Utility and Wartime Fashion" />
-      <p>World War II brought practical clothing designs with functional fabrics and muted tones.</p>
+      <article>
+        <h2>Rise of Punk and Street Fashion</h2>
+        <img src="Rise_of_Punk_and_Street_Fashion.jpg" alt="Rise of Punk and Street Fashion">
+        <p>The late 20th century saw fashion embrace rebellion through punk and streetwear influences.</p>
+        <button>Read more</button>
+      </article>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Fashion Timeline. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <dialog id="modal">
+    <p>More details coming soon...</p>
+    <button aria-label="Close modal window">Close</button>
+  </dialog>
+
+  <!-- JavaScript inside -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const themeBtn = document.getElementById("themeBtn");
+      const modal = document.getElementById("modal");
+      const closeModalBtn = modal.querySelector("button[aria-label='Close modal window']");
+
+      // Theme toggle
+      themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+      });
+
+      // Modal open
+      document.querySelectorAll("#timeline button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          modal.showModal();
+        });
+      });
+
+      // Modal close
+      closeModalBtn.addEventListener("click", () => {
+        modal.close();
+      });
+    });
+  </script>
+
 </body>
 </html>
 
+
  
+
 
 
 
