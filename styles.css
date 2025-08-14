@@ -1,240 +1,79 @@
-/* =========================
-   Base Styling & Typography
-   ========================= */
-:root {
-  --bg-light: #f8f8f8;
-  --bg-dark: #121212;
-  --text-light: #333;
-  --text-dark: #eee;
-  --accent: #b56576;
-}
-
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  line-height: 1.6;
 }
 
 header {
-  background-color: var(--accent);
-  color: #fff;
-  padding: 1rem;
   text-align: center;
+  padding: 20px;
+  background-color: #1e3a5f;
+  color: white;
 }
 
-header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
+#timeline {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 40px;
 }
 
-header nav ul li {
-  margin: 0 0.5rem;
-}
-
-header nav ul a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-header nav ul a:hover {
-  text-decoration: underline;
-}
-
-.theme-toggle-wrapper {
-  text-align: right;
-  margin-bottom: 0.5rem;
-}
-
-.theme-toggle-wrapper button {
-  background: #fff;
-  color: var(--accent);
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
+.timeline-event {
+  flex: 0 0 auto;
+  text-align: center;
   cursor: pointer;
-}
-
-.theme-toggle-wrapper button:hover {
-  background: #eee;
-}
-
-/* =========================
-   Timeline Layout
-   ========================= */
-#timeline {
   position: relative;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding-left: 2rem;
-  border-left: 4px solid var(--accent);
 }
 
-#timeline article {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-}
-
-#timeline article::before {
-  content: "";
-  position: absolute;
-  left: -14px;
-  top: 0.4rem;
+.timeline-event .dot {
   width: 20px;
   height: 20px;
-  background-color: var(--bg-light);
-  border: 4px solid var(--accent);
+  background-color: #1e3a5f;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
-#timeline header h2 {
-  margin: 0.2rem 0;
+.timeline-event p {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-#timeline figure {
-  margin: 0.5rem 0;
-}
-
-#timeline img {
-  max-width: 150px;
-  border-radius: 5px;
-}
-
-#timeline p {
-  margin: 0.5rem 0;
-}
-
-#timeline button {
-  background-color: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#timeline button:hover {
-  background-color: #9a4f62;
-}
-
-/* =========================
-   Modal Styling
-   ========================= */
-#modal {
+.modal {
+  display: none;
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  display: none; /* Hidden by default */
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  z-index: 1000;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
 }
 
-#modal[aria-modal="true"] {
-  display: flex;
-}
-
-#modal h2 {
-  margin-top: 0;
-}
-
-#modal > div {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
   max-width: 500px;
-  width: 100%;
-}
-
-#modal button {
-  background-color: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#modal button:hover {
-  background-color: #9a4f62;
-}
-
-/* =========================
-   Footer
-   ========================= */
-footer {
+  border-radius: 8px;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #666;
 }
 
-/* =========================
-   Responsive Breakpoints
-   ========================= */
-@media (max-width: 767px) {
+.modal-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 768px) {
   #timeline {
-    padding-left: 1rem;
-    border-left: none;
+    gap: 20px;
   }
-  #timeline article {
-    padding-left: 0;
-  }
-  #timeline article::before {
-    display: none;
-  }
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  #timeline img {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  #timeline img {
-    max-width: 200px;
-  }
-}
-
-@media (min-width: 1024px) {
-  #timeline {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================
-   Dark Mode
-   ========================= */
-body.dark-mode {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
-}
-
-body.dark-mode header {
-  background-color: #000;
-}
-
-body.dark-mode #timeline {
-  border-left-color: var(--text-dark);
-}
-
-body.dark-mode #timeline article::before {
-  background-color: var(--bg-dark);
-  border-color: var(--text-dark);
-}
-
-body.dark-mode #modal > div {
-  background-color: #222;
-  color: var(--text-dark);
 }
