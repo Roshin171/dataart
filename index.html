@@ -1,199 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Fashion Timeline</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #fff;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    .header {
-        display: flex;
-        justify-content: center;
-        background: linear-gradient(to right, #8e2de2, #ff416c);
-        padding: 15px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .year-btn {
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-    .year-btn.active {
-        background: rgba(255, 255, 255, 0.2);
-        font-weight: bold;
-    }
-    .toggle-theme {
-        margin-left: auto;
-        background: white;
-        color: black;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .cards {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-        flex-wrap: wrap;
-    }
-    .card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        width: 300px;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: 0.3s;
-    }
-    .card:hover {
-        transform: translateY(-5px);
-    }
-    .card img {
-        width: 100px;
-        height: auto;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
-    .card h3 {
-        margin: 10px 0 5px;
-        color: #b312aa;
-    }
-    .card p {
-        font-size: 14px;
-        text-align: center;
-    }
-    .learn-btn {
-        margin-top: auto;
-        background: #e74c3c;
-        border: none;
-        padding: 8px 15px;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    /* Dark Theme */
-    body.dark {
-        background-color: #222;
-        color: white;
-    }
-    body.dark .card {
-        background: #333;
-    }
-</style>
+  <meta charset="UTF-8">
+  <title>Fashion Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.jpg">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="header">
-    <button class="year-btn" onclick="showYear(1900)">1900</button>
-    <button class="year-btn" onclick="showYear(1910)">1910</button>
-    <button class="year-btn" onclick="showYear(1920)">1920</button>
-    <button class="year-btn" onclick="showYear(1930)">1930</button>
-    <button class="year-btn" onclick="showYear(1940)">1940</button>
-    <button class="year-btn" onclick="showYear(1977)">1977</button>
-    <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
-</div>
+  <header>
+    <div class="theme-toggle-wrapper">
+      <button id="themeBtn" aria-label="Toggle Theme">🌙 Dark Mode</button>
+    </div>
 
-<div class="cards" id="cards-container">
-    <!-- Cards will load here -->
-</div>
+    <nav aria-label="Fashion Year Navigation">
+      <ul class="year-links">
+        <li><a href="#year-1900">1900</a></li>
+        <li><a href="#year-1910">1910</a></li>
+        <li><a href="#year-1920">1920</a></li>
+        <li><a href="#year-1930">1930</a></li>
+        <li><a href="#year-1940">1940</a></li>
+        <li><a href="#year-1977">1977</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<script>
-const data = {
-    1900: [
-        {
-            title: "Edwardian Era Elegance",
-            img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Edwardian_gown.jpg",
-            subtitle: "Edwardian gown style",
-            description: "The early 1900s fashion featured S-shaped corsets, high collars, and lavish gowns that emphasized formality and femininity."
-        }
-    ],
-    1910: [
-        {
-            title: "Poiret and the Birth of Modernism",
-            img: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Paul_Poiret_fashion.jpg",
-            subtitle: "Paul Poiret’s modern designs",
-            description: "Designer Paul Poiret rejected corsets, introducing free-flowing silhouettes and bold colors that shaped early modern fashion."
-        }
-    ],
-    1920: [
-        {
-            title: "The Flapper Revolution",
-            img: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Flappers_in_1920s.jpg",
-            subtitle: "Iconic flapper dress",
-            description: "The roaring twenties introduced short hemlines, fringe, beads, and bobbed hair. Fashion reflected women's liberation and nightlife culture."
-        }
-    ],
-    1930: [
-        {
-            title: "Hollywood Glamour",
-            img: "https://upload.wikimedia.org/wikipedia/commons/7/70/1930s_Fashion.jpg",
-            subtitle: "Silver screen style",
-            description: "Bias-cut gowns, satin fabrics, and elegant silhouettes dominated the 1930s, influenced by Hollywood movie stars."
-        }
-    ],
-    1940: [
-        {
-            title: "Utility and Wartime Fashion",
-            img: "https://upload.wikimedia.org/wikipedia/commons/f/f6/1940s_fashion.jpg",
-            subtitle: "Practical wartime style",
-            description: "With fabric rationing, fashion embraced shorter skirts, padded shoulders, and practical designs suited for wartime life."
-        }
-    ],
-    1977: [
-        {
-            title: "Disco Fever",
-            img: "https://upload.wikimedia.org/wikipedia/commons/4/44/1970s_disco.jpg",
-            subtitle: "Shiny and bold",
-            description: "Seventies disco style featured glitter, bell-bottoms, and vibrant prints, bringing energy to the dance floor."
-        }
-    ]
-};
+  <main>
+    <section id="timeline" aria-label="Fashion History Timeline"></section>
 
-function showYear(year) {
-    document.querySelectorAll(".year-btn").forEach(btn => btn.classList.remove("active"));
-    event.target.classList.add("active");
+    <!-- Modal -->
+    <div id="modal" role="dialog" aria-modal="true" hidden>
+      <div class="modal-content">
+        <button id="closeModal" aria-label="Close modal window">✖</button>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" alt="">
+        <p id="modalDescription"></p>
+        <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+      </div>
+    </div>
+  </main>
 
-    const container = document.getElementById("cards-container");
-    container.innerHTML = "";
-    data[year].forEach(item => {
-        container.innerHTML += `
-        <div class="card">
-            <h3>${item.title}</h3>
-            <img src="${item.img}" alt="${item.subtitle}" />
-            <small>${item.subtitle}</small>
-            <p>${item.description}</p>
-            <button class="learn-btn">Learn More</button>
-        </div>
-        `;
-    });
-}
+  <footer>
+    <p>&copy; 2025 Fashion Timeline</p>
+  </footer>
 
-// Theme toggle
-function toggleTheme() {
-    document.body.classList.toggle("dark");
-}
-
-// Show 1940 by default
-showYear(1940);
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
